@@ -16,16 +16,17 @@
 
   <div class="row indexRowPost">
 
-    <!-- events description -->
+    <!-- post content -->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
 
       <div class="indexPostTitle"> <%= post.title %> </div> 
 
       <div class="indexPostDate">
-        Date Created: <%= post.datecreated %> </br> 
+        Date Created: <%= post.datecreated %> 
         Date Edited: <%= post.dateedited.strftime("%d %b %Y %A") %>          
       </div> 
+
+      <%= image_tag(post.image_url, class: "img-responsive text-center") if post.image_url.present? %>
 
       <div class="indexPostDescript"> <%= post.content %> </div>
 
