@@ -13,3 +13,193 @@
  *= require_tree .
  *= require_self
  */
+/* Global /////////////////////////////////////////// */
+
+body
+{ 
+	font-family: Open Sans, Arial;
+	font-size:1.2em;
+	background-color: #EEE;
+  background-image: url("http://i.imgur.com/bb9083G.jpg");
+}
+
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; }
+th { border-bottom: 1px solid #DDD; }
+
+
+.redBtn 
+{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #FFF!important;
+  font-weight:bold;
+  background: #c74f0e;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  border:none;
+
+}
+
+.redBtn:hover 
+{
+  text-decoration: none;
+  background-color:#b3470d;
+}
+
+.whiteBtn 
+{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #555!important;
+  font-weight:bold;
+  background: #FFF;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  border: solid #aaa 1px;
+
+}
+
+.whiteBtn:hover 
+{
+  background: #FFF;
+  border: solid #aaa 1px;
+  text-decoration: none;
+}
+
+.textField
+{
+    width:100%;
+
+}
+
+.bottomPadding5px { padding-bottom:5px; }
+.bottomPadding20px { padding-bottom:20px; }
+
+
+/* Events Listing /////////////////////////////////////////// */
+
+
+.indexAddPosts{float:right; text-align:right;}
+
+.indexRowPost
+{
+	border:solid 1px #CCC;
+	margin-bottom:15px;
+	padding:15px 0px 0px 0px; 
+	background-color:white;
+}
+
+.indexPostDate 
+{
+	font-size:1em;
+	text-transform: uppercase;
+	margin-bottom:5px;
+	color:#000;
+}
+
+.indexPostTitle
+{	
+	font-size:1.8em;
+	line-height:1em;
+	margin-bottom: 20px;
+}
+
+.indexPostDescript
+{
+	font-size:1em;
+	margin-bottom:30px;
+	line-height:1.3em;
+	color:#555;
+
+}
+
+.indexPostLinks
+{
+	text-align: left;
+	padding-bottom: 20px;
+
+}
+
+.indexPostLinksBtn {
+  background: #3498db;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 1em;
+  background: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border: solid #aaa 1px;
+  text-decoration: none;
+
+}
+
+.indexPostLinksBtn:hover {
+  background: #fc6f3c;
+  color: #000000;
+  border: solid #fc6f3c 1px;
+  text-decoration: none;
+}
+
+
+.indexAddPosts
+{
+    display: inline-block;
+    vertical-align: bottom;
+    padding:30px 0px 0px 0px;
+}
+
+.indexPostDateHidden
+{
+    visibility: hidden; 
+}
+
+.indexPostTimeLeft
+{
+    margin-bottom: 15px;
+    color:#666;
+}
+
+/* New Event /////////////////////////////////////////// */
+
+.newPostContainer
+{
+    background-color:white;
+    border:solid 1px #CCC;
+    padding: 20px;
+
+}
+
+.newPostDescriptionField
+{
+    height: 4em;
+
+}
+
+/* View Event /////////////////////////////////////////// */
+
+.viewPostContentContainer
+{
+    font-size:1.2em;
+    text-align:left;
+    margin-bottom:10px;
+    line-height:1.3em;
+
+}
+
+.viewPostButtonsContainer
+{
+    font-size:1.2em;
+    padding-top:30px;
+    padding-bottom:20px;
+}
+
+.viewPostButtonHolder
+{
+   padding-bottom:20px;
+
+}

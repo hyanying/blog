@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :require_user, only: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts

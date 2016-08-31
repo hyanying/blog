@@ -13,6 +13,9 @@ group :production do
 	gem 'rails_12factor'
 end
 
+#use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.11'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
