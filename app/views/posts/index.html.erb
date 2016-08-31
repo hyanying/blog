@@ -13,7 +13,7 @@
   <!-- Posts Listing -->
 
   <% @posts.each do |post| %>
-
+   
   <div class="row indexRowPost">
 
     <!-- post content -->
@@ -22,8 +22,8 @@
       <div class="indexPostTitle"> <%= post.title %> </div> 
 
       <div class="indexPostDate">
-        Date Created: <%= post.datecreated %> 
-        Date Edited: <%= post.dateedited.strftime("%d %b %Y %A") %>          
+        Date Created: <%= post.datecreated.strftime("%d %b %Y %A") %> 
+              
       </div> 
 
       <%= image_tag(post.image_url, class: "img-responsive text-center") if post.image_url.present? %>
