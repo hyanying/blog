@@ -22,7 +22,7 @@
       <div class="indexPostTitle"> <%= post.title %> </div> 
 
       <div class="indexPostDate">
-        Date Created: <%= post.datecreated.strftime("%d %b %Y %A") %> 
+      <%= post.datecreated.strftime("%d %b %Y %A") %> 
               
       </div> 
 
@@ -46,10 +46,5 @@
 
 </div>
 
-
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
 
 </div>
