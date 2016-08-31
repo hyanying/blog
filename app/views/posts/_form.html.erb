@@ -1,42 +1,63 @@
-<%= form_for(post) do |f| %>
-  <% if post.errors.any? %>
+<div class="row newPostContainer">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+  <br/>
+    <%= form_for(post) do |f| %>
+
+    <% if post.errors.any? %>
+
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this event from being saved:</h2>
 
       <ul>
-      <% post.errors.full_messages.each do |message| %>
+        <% post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <div class="field bottomPadding5px">
+      <%= f.label "Title" %>
+      <%= f.text_field :title, :class => "textField" %>
+    </div>
+
+    <div class="field bottomPadding20px">
+      <%= f.label :"Date Created" %>
+      <%= f.date_select :datecreated %>
+    </div>
+
+    <div class="field bottomPadding5px">
+      <%= f.label :content %>
+      <%= f.text_area :content, :class => "textField newPostDescriptionField" %>
+    </div>
+
+    <div class="field bottomPadding5px">
+      <%= f.label :"Image URL" %>
+      <%= f.text_field :image_url, :class => "textField" %></br></br>
+
+      Please insert an image url.<br/> 
+      For example, try: http://i.imgur.com/3nNpuiW.jpg <br/><br/>
+      The image should have a minimum width of 1280px.<br/><br/>
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0"></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="actions">
+          <%= f.submit :class => "redBtn btn-block" %>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0"></div>
+    </div>
+
+
+    <% end %>
+
+
   </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
 
-  <div class="field">
-    <%= f.label :datecreated %>
-    <%= f.datetime_select :datecreated %>
-  </div>
-
-  <div class="field">
-    <%= f.label :dateedited %>
-    <%= f.datetime_select :dateedited %>
-  </div>
-
-    <div class="field">
-    <%= f.label 'Image Url' %>
-    <%= f.text_field :image_url %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
