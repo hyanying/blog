@@ -6,7 +6,9 @@
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -39,7 +41,7 @@
 				<% if current_user %>
 
 					<ul class="nav navbar-nav">	
-						<li class="active"> <%= current_user.email %> </li>
+						<li class="active"> <%= current_user.first_name %> <%= current_user.last_name %> is logged in </li>
 						<li class="active"> <%= link_to "Log out", logout_path, method: "delete" %> </li>	
 					</ul>
 
@@ -61,15 +63,15 @@
 		<div class="row">
 
 			<!--side -->
-			<div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+			<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
 
 			<!-- center content -->
-			<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 				<%= yield %>
 			</div>
 
 			<!--side -->
-			<div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+			<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
 
 		</div>
 		<footer>

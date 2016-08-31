@@ -17,7 +17,7 @@
 
 body
 { 
-	font-family: Open Sans, Arial;
+	font-family: 'Playfair Display', serif;
 	font-size:1.2em;
 	background-color: #EEE;
   background-image: url("http://i.imgur.com/bb9083G.jpg");
@@ -27,6 +27,7 @@ footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 
+h1{font-family: 'Playfair Display', serif;}
 
 .redBtn 
 {
@@ -88,30 +89,33 @@ th { border-bottom: 1px solid #DDD; }
 {
 	border:solid 1px #CCC;
 	margin-bottom:15px;
-	padding:15px 0px 0px 0px; 
+	padding:40px; 
 	background-color:white;
+}
+
+
+.indexPostTitle
+{	
+	font-size:2.2em;
+	line-height:1.2em;
+	margin-bottom: 20px;
 }
 
 .indexPostDate 
 {
-	font-size:1em;
-	text-transform: uppercase;
-	margin-bottom:5px;
-	color:#000;
-}
-
-.indexPostTitle
-{	
-	font-size:1.8em;
-	line-height:1em;
-	margin-bottom: 20px;
+  font-size:1em;
+  text-transform: uppercase;
+  margin-bottom:5px;
+  color:#000;
 }
 
 .indexPostDescript
 {
-	font-size:1em;
+  font-family: 'Playfair Display', serif;
+  text-align:justify;
+	font-size:1.2em;
 	margin-bottom:30px;
-	line-height:1.3em;
+	line-height:1.5em;
 	color:#555;
 
 }
