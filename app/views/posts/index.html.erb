@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4"><h1>FuzzBlog</h1>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 indexAddPosts"><%= link_to 'Add New Post', new_post_path, class: "redBtn" %></div>
+    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 indexAddPosts"><%= link_to 'Add New Post', new_post_path, class: "btn redBtn" %></div>
 
   </div> 
 
@@ -22,18 +22,18 @@
       <div class="indexPostTitle"> <%= post.title %> </div> 
 
       <div class="indexPostDate">
-      <%= post.datecreated.strftime("%d %b %Y %A") %> 
+      <span class="glyphicon glyphicon-calendar"></span> <%= post.datecreated.strftime("%d %b %Y %A") %> &nbsp; <span class="glyphicon glyphicon-link"></span> <%= link_to 'Permalink', post %> 
               
       </div> 
 
       <%= image_tag(post.image_url, class: "img-responsive text-center") if post.image_url.present? %>
 
-      <div class="indexPostDescript"> <%= post.content %> </div>
+      <div class="indexPostDescript"> <%= truncate(post.content,length:300) %> </div>
 
 
 
-      <div class="indexPostLinks">     
-        <%= link_to 'View', post, class:"indexPostLinksBtn" %> &nbsp;
+      <div class="indexPostLinks text-center">     
+        <%= link_to 'Continue Reading', post, class:"indexPostLinksBtn" %> &nbsp;
         <%= link_to 'Edit', edit_post_path(post), class:"indexPostLinksBtn" %> &nbsp;
         <%= link_to 'Delete', post, class:"indexPostLinksBtn", method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>  

@@ -125,9 +125,8 @@ p{font-size:1.1em;}
 .indexPostDate 
 {
   font-size:1em;
-  text-transform: uppercase;
   margin-bottom:15px;
-  color:#000;
+  color:#555;
 }
 
 .indexPostDescript
@@ -143,7 +142,6 @@ p{font-size:1.1em;}
 
 .indexPostLinks
 {
-	text-align: left;
 	padding-bottom: 20px;
 
 }
@@ -164,9 +162,9 @@ p{font-size:1.1em;}
 }
 
 .indexPostLinksBtn:hover {
-  background: #fc6f3c;
-  color: #000000;
-  border: solid #fc6f3c 1px;
+  background: #000;
+  color: #fff;
+  border: solid #000 1px;
   text-decoration: none;
 }
 
