@@ -39,6 +39,13 @@ h1
 
 p{font-size:1.1em;}
 
+.adminContainer
+{ 
+  background-color:white;
+  padding:20px;
+
+}
+
 .formLabel
 {
   font-family:'Open Sans', Arial, 'Sans Serif';
