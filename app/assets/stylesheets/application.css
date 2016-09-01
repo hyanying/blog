@@ -18,7 +18,7 @@
 body
 { 
 	font-family: 'Playfair Display', Georgia, serif;
-	font-size:1.3em;
+	font-size:1.2em;
 	background-color: #EEE;
   background-image: url("http://i.imgur.com/2n9WdrE.png");
   text-rendering:optimizeLegibility;
@@ -37,14 +37,14 @@ h1
   
 }
 
-p{font-size:1.3em;}
+p{font-size:1.1em;}
 
 .colorWhite {color:white;}
 
 .btn
 {
     font-family:'Open Sans', Arial, 'Sans Serif';
-    font-size:1.3em;
+    font-size:1.1em;
 }
 
 .redBtn 
@@ -92,7 +92,7 @@ p{font-size:1.3em;}
 {
     width:100%;
     font-family:'Open Sans', Arial, 'Sans Serif';
-    font-size:1.3em;
+    font-size:1.1em;
     padding:5px;
 }
 
