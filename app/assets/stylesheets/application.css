@@ -39,6 +39,14 @@ h1
 
 p{font-size:1.1em;}
 
+.formLabel
+{
+  font-family:'Open Sans', Arial, 'Sans Serif';
+  font-size:1.1em;
+  text-align:left;
+
+}
+
 .colorWhite {color:white;}
 
 .btn

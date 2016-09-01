@@ -19,38 +19,39 @@
     <% end %>
 
     <div class="field bottomPadding5px">
-      <%= f.label "Title" %>
+      <div class="formLabel"><%= f.label "Title" %></div>
       <%= f.text_field :title, :class => "textField" %>
     </div>
 
     <div class="field bottomPadding20px">
-      <%= f.label :"Date Created" %>
+      <div class="formLabel"><%= f.label :"Date Created" %></div>
       <%= f.date_select :datecreated %>
     </div>
 
     <div class="field bottomPadding5px">
-      <%= f.label :content %>
       <%= f.text_area :content, :class => "textField newPostDescriptionField" %>
     </div>
 
     <div class="field bottomPadding5px">
-      <%= f.label :"Image URL" %>
+      <div class="formLabel"><%= f.label :"Image URL" %></div>
       <%= f.text_field :image_url, :class => "textField" %></br></br>
 
+      <div class="formLabel">
       Please insert an image url.<br/> 
       For example, try: http://i.imgur.com/3nNpuiW.jpg <br/><br/>
       The image should have a minimum width of 1280px.<br/><br/>
+      </div>
 
     </div>
 
     <div class="viewPostButtonsContainer">   
 
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder">
-        <%= f.submit :class => "redBtn btn-block" %>
+        <%= f.submit :class => "redBtn btn-block btn" %>
       </div>
 
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder text-center">
-        <%= link_to 'Cancel', posts_path, class: "whiteBtn btn-block" %>
+        <%= link_to 'Cancel', post_path, class: "whiteBtn btn-block btn" %>
       </div>
       
     </div>
