@@ -28,6 +28,11 @@
     <%= f.email_field :email %>
   </div>
 
+    <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
     <%= link_to 'Back', users_path, class:"indexPostLinksBtn" %>
