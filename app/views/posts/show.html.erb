@@ -17,8 +17,14 @@
     <div class="indexPostDescript"> <%= @post.content %> </div>
 
       <div class="indexPostLinks text-center">     
-        <%= link_to 'Edit', edit_post_path(@post), class:"indexPostLinksBtn" %> &nbsp;
-        <%= link_to 'Back', posts_path, class: "indexPostLinksBtn" %> &nbsp;
+
+        <% if checkAdminStatus(current_user.status) %>
+
+          <%= link_to 'Edit', edit_post_path(@post), class:"indexPostLinksBtn" %> &nbsp;
+        
+        <% end %>
+
+        <%= link_to 'Back', posts_path, class: "indexPostLinksBtn" %>
     
       </div>  
 

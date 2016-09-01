@@ -37,16 +37,21 @@
 
       <div class="indexPostDescript"> <%= truncate(post.content,length:280) %> </div>
 
-      <% if checkAdminStatus(current_user.status) %>
+      
 
         <div class="indexPostLinks text-center">     
-          <%= link_to 'Continue Reading', post, class:"indexPostLinksBtn" %> &nbsp;
-          <%= link_to 'Edit', edit_post_path(post), class:"indexPostLinksBtn" %> &nbsp;
-          <%= link_to 'Delete', post, class:"indexPostLinksBtn", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Continue Reading', post, class:"indexPostLinksBtn" %> 
+
+          <% if checkAdminStatus(current_user.status) %>
+
+            &nbsp; <%= link_to 'Edit', edit_post_path(post), class:"indexPostLinksBtn" %> &nbsp;
+            <%= link_to 'Delete', post, class:"indexPostLinksBtn", method: :delete, data: { confirm: 'Are you sure?' } %>
+            
+          <% end %>
+
         </div>  
 
-      <% end %>
-
+      
     </div>
 
   </div> 
