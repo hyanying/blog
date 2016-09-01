@@ -2,7 +2,10 @@
 
 <div class="row newPostContainer">
 
-</br>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+	<p>This is a private blog. Please log in to view the blog posts.</p>
+</div>
+
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<%= form_for(:session,url: login_path) do |f| %>
@@ -19,11 +22,11 @@
 
 <div class ="row">
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder text-center">
-		<%= f.submit "Log in", class: 'redBtn btn-block' %> 
+		<%= f.submit "Log In", class: 'btn redBtn btn-block' %> 
 	</div>
 
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder text-center">
-		<%= link_to 'Cancel', posts_path, class: "whiteBtn btn-block" %>
+		<%= link_to 'Cancel', posts_path, class: "btn whiteBtn btn-block" %>
 	</div>
 
 </div>
