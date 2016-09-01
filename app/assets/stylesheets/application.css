@@ -53,7 +53,6 @@ p{font-size:1.1em;}
   -moz-border-radius: 5;
   border-radius: 5px;
   color: #FFF!important;
-  font-weight:bold;
   background: #c74f0e;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
@@ -134,7 +133,7 @@ p{font-size:1.1em;}
 	font-size:1.3em;
   margin-top:20px;
 	margin-bottom:30px;
-	line-height:1.5em;
+	line-height:1.3em;
 	color:#555;
 
 }
@@ -142,7 +141,6 @@ p{font-size:1.1em;}
 .indexPostLinks
 {
 	padding-bottom: 20px;
-  font-size:1.2em;
 
 }
 
