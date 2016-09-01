@@ -44,6 +44,7 @@ p{font-size:1.1em;}
   font-family:'Open Sans', Arial, 'Sans Serif';
   font-size:1.1em;
   text-align:left;
+  line-height:auto;
 
 }
 
@@ -208,6 +209,7 @@ p{font-size:1.1em;}
 .newPostDescriptionField
 {
     height: 30em;
+    line-height:auto;
 }
 
 /* View Event /////////////////////////////////////////// */
