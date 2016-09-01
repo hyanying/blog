@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-<div class="adminContainer">
+<div class="adminContainer"> 
   <table>
     <thead>
       <tr>
@@ -21,8 +21,15 @@
         <td><%= user.email %></td>
         <td><%= user.status %></td>
         <td></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if checkAdminStatus(user.status) %>
+          <td></td>
+          <td></td>        
+        <% else %>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      
       </tr>
       <% end %>
     </tbody>

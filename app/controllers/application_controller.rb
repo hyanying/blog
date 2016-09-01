@@ -3,16 +3,24 @@ class ApplicationController < ActionController::Base
   helper_method :checkAdminStatus
   helper_method :current_user
 
-
+ 
   def checkAdminStatus(user_status) 
 
-	if user_status == "admin"
-			return true;
-	else
-			return false;	
-	end
+	   if user_status == "admin"
+       	return true;
+	   else
+		  	return false;	
+	   end
 			
-  end		
+  end	
+  
+  def requireAdmin 
+
+    if current_user.status != "admin"
+      redirect_to '/' 
+    end
+      
+  end	
 
   def current_user
   	@current_user ||= User.find(session[:user_id]) if session[:user_id]
