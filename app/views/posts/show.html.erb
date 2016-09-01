@@ -1,41 +1,26 @@
 <div class="row newPostContainer">
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
     <p id="notice"><%= notice %></p>
 
-    <!-- Trip Image -->
-    <div class="viewPostContentContainer"> 
-      <%= image_tag(@post.image_url, class: "img-responsive text-center") if @post.image_url.present? %>
-    </div><br/>
 
-    <div class="viewPostContentContainer">
-      <strong>Title:</strong> <%= @post.title %>
-    </div>
+    <div class="indexPostTitle"> <%= @post.title %> </div> 
 
-    <div class="viewPostContentContainer"> 
-      <strong>From:</strong> <%= @post.datecreated.strftime("%d %b %Y %A") %> 
-    </div>
+    <div class="indexPostDate">
+      <span class="glyphicon glyphicon-calendar"></span> <%= @post.datecreated.strftime("%d %b %Y %A") %> &nbsp; <span class="glyphicon glyphicon-link"></span> <%= link_to 'Permalink', @post %> 
 
-    <div class="viewPostContentContainer"> 
-      <strong>Content:</strong>
-    </div>
+    </div> 
 
-    <div class="viewPostContentContainer"> 
-      <%= @post.content %>
-    </div>
+    <%= image_tag(@post.image_url, class: "img-responsive text-center") if @post.image_url.present? %>
 
-    <div class="viewPostButtonsContainer">   
+    <div class="indexPostDescript"> <%= @post.content %> </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder">
-        <%= link_to 'Edit', edit_post_path(@post), class: "redBtn btn-block"  %>
-      </div>
-
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viewPostButtonHolder">
-        <%= link_to 'Back', posts_path, class: "whiteBtn btn-block" %>
-      </div>
-      
-    </div>
+      <div class="indexPostLinks text-center">     
+        <%= link_to 'Edit', edit_post_path(@post), class:"indexPostLinksBtn" %> &nbsp;
+        <%= link_to 'Back', posts_path, class: "indexPostLinksBtn" %> &nbsp;
+    
+      </div>  
 
   </div>  
 
